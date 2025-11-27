@@ -40,7 +40,7 @@ jobs:
           context: ./PortfolioBackend-main
           file: ./PortfolioBackend-main/backend.Dockerfile
           push: true
-          platforms: linux/amd64
+
           tags: ${{ secrets.DOCKER_USERNAME }}/sdp-backend:latest
 
       # -------------------------------------------------
@@ -52,5 +52,5 @@ jobs:
           context: ./portfe
           file: ./portfe/frontend.Dockerfile
           push: true
-          platforms: linux/amd64
+          
           tags: ${{ secrets.DOCKER_USERNAME }}/sdp-frontend:latest
