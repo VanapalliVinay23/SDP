@@ -1,0 +1,56 @@
+name: CI Build and Push Docker Images
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -------------------------------------------------
+      # 🧩 Step 1 — Checkout repository
+      # -------------------------------------------------
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # -------------------------------------------------
+      # 🧱 Step 2 — Set up Docker Buildx
+      # -------------------------------------------------
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # -------------------------------------------------
+      # 🔐 Step 3 — Login to DockerHub
+      # -------------------------------------------------
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_SECRET }}
+
+      # -------------------------------------------------
+      # ⚙ Step 4 — Build & Push Backend Image
+      # -------------------------------------------------
+      - name: Build and Push Backend Image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./springbootbackend
+          file: ./springbootbackend/backend.Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: ${{ secrets.DOCKER_USERNAME }}/sdp-backend:latest
+
+      # -------------------------------------------------
+      # 💻 Step 5 — Build & Push Frontend Image
+      # -------------------------------------------------
+      - name: Build and Push Frontend Image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./reactfrontend
+          file: ./reactfrontend/frontend.Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: ${{ secrets.DOCKER_USERNAME }}/sdp-frontend:latest
