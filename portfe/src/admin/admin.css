@@ -1,0 +1,250 @@
+/* =============================
+   Global Styles
+   ============================= */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fffaf0, #ffe0cc);
+  min-height: 100vh;
+}
+
+/* =============================
+   Semi-Circle Container (Optional for Navbar)
+   ============================= */
+
+.semi-circle-container {
+  background: linear-gradient(to bottom, #ffd699, #fff);
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px 20px 60px;
+  border-radius: 0 0 100% 100% / 0 0 50% 50%;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* =============================
+   Admin Navbar
+   ============================= */
+
+.admin-navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff3e0;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+  background-color: #ffc266;
+  color: #000;
+}
+
+.logout {
+  color: red;
+  background-color: #ffe6e6;
+}
+
+/* =============================
+   Main Admin Container
+   ============================= */
+
+.admin-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================
+   Sections
+   ============================= */
+
+.admin-form-section,
+.admin-table-section {
+  margin-bottom: 40px;
+}
+
+.admin-form-section h3,
+.admin-table-section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  color: #d35400;
+}
+
+/* =============================
+   Form Styling
+   ============================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffcc99;
+  border-radius: 8px;
+  background-color: #fffaf0;
+  font-size: 14px;
+}
+
+button[type="submit"],
+form button {
+  background-color: #ff944d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+form button:hover {
+  background-color: #e67300;
+}
+
+/* =============================
+   Form Sections (Optional Class Groups)
+   ============================= */
+
+.certificate-form-container,
+.education-form-container,
+.skill-form-container,
+.project-form-container {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 25px;
+  background-color: #fffdf7;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =============================
+   Success & Error Messages
+   ============================= */
+
+.certificate-message,
+.education-message,
+.skill-message,
+.project-message,
+.admin-message {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+/* =============================
+   Tables (Used Across Admin Sections)
+   ============================= */
+
+.certificate-table-container,
+.education-table-container,
+.skill-table-container,
+.project-table-container {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  overflow-x: auto;
+  background-color: #fffef9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  border: 1px solid #ffd9b3;
+  text-align: center;
+}
+
+table th {
+  background-color: #fff0e0;
+  color: #333;
+  font-weight: bold;
+}
+
+table td {
+  background-color: #fffef9;
+}
+
+table a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+/* Delete buttons in tables */
+table button {
+  background-color: #ff6666;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+table button:hover {
+  background-color: #cc0000;
+}
+
+/* =============================
+   Route Content Container
+   ============================= */
+
+.admin-routes {
+  text-align: center;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #fffaf5;
+  border-radius: 15px;
+}

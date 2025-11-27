@@ -1,0 +1,145 @@
+/* Main Navbar Container */
+.main-navbar {
+  background-color: #ff7f27; /* Nice orange */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Center links */
+  align-items: center;
+  gap: 25px; /* Spacing between links */
+}
+
+/* Navbar Links */
+.main-navbar a {
+  text-decoration: none;
+  color: white; /* Default text color */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* Different background for active link */
+.main-navbar a.active {
+  background-color: #e66a12; /* Darker orange */
+}
+
+/* Remove underline on click */
+.main-navbar a:focus {
+  outline: none;
+}
+
+
+/* Contact Page Styles */
+.contact-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e0e7ff, #f5f3ff);
+  padding: 1.5rem;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Title & Description */
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Specific Button Styles */
+.email-btn {
+  background: linear-gradient(to right, #8b5cf6, #3b82f6);
+  color: white;
+}
+
+.email-btn:hover {
+  transform: scale(1.05);
+}
+
+.phone-btn {
+  border: 1px solid #d1d5db;
+  color: #374151;
+  background: white;
+}
+
+.phone-btn:hover {
+  background: #f3f4f6;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.icon-lg {
+  width: 28px;
+  height: 28px;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link {
+  color: #2563eb;
+}
+
+.linkedin-link:hover {
+  color: #1e40af;
+}
+
+.github-link {
+  color: #111827;
+}
+
+.github-link:hover {
+  color: black;
+}
+
+/* Footer */
+.contact-footer {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
