@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import config from "../config";
 import { useAuth } from "../contextapi/AuthContext";
-import "./adminLogin.css"; // 👈 import the new CSS file
+import "./adminlogin.css"; // 👈 import the new CSS file
 
 export default function AdminLogin() {
   const [formData, setFormData] = useState({
